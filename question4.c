@@ -4,7 +4,7 @@ int main()
     int a,b,c,d,e;
     float percent;
     printf("enter the marks of the five subject\n");
-    scanf("%d,%d,%d,%d,%d",&a,&b,&c,&d,&e);
+    scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
     percent=(a+b+c+d+e)/500*100;
     if(percent>=90)
     {
