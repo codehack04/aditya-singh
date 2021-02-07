@@ -4,7 +4,7 @@ int main()
     int a,b,add,sub,mul,div;
     char c;
     printf("enter the two numbers\n");
-    scanf("%d,%d",&a,&b);
+    scanf("%d%d",&a,&b);
     add=a+b;
     sub=a-b;
     mul=a*b;
