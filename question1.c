@@ -1,20 +1,16 @@
-# include<stdio.h>
-int main()
+#include<stdio.h>
+void main()
 {
-    int a,b,add,sub,mul,div;
-    char c;
-    printf("enter the two numbers\n");
-    scanf("%d%d",&a,&b);
-    add=a+b;
-    sub=a-b;
-    mul=a*b;
-    div=a/b;
-    printf("addition of the number:-",add);
-    printf("subtraction of the number:-",sub);
-    printf("multiplication of the number:-",mul);
-    printf("division of the number:-",div);
-    return 0;
-    
 
+    int n,sum=0,remainder;
+    printf("enter the number");
+    scanf("%d",&n);
+    while(n>0)
+    {
+        remainder=n%10;
+        sum=sum+remainder;
+        n=n/10;
 
+    }
+    printf("sum of the digit of the number is:=%d",sum);
 }

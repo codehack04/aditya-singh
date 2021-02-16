@@ -1,34 +1,32 @@
 #include<stdio.h>
-int main()
+void main()
 {
-    int a,b,c,d,e;
-    float percent;
-    printf("enter the marks of the five subject\n");
-    scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
-    percent=(a+b+c+d+e)/500*100;
-    if(percent>=90)
+    int a[100],n,i,j,temp;
+    printf("enter the size of the array\n");
+    scanf("%d",&n);
+    printf("enter the elements of the array\n");
+    for(i=0;i<n;i++)
     {
-         printf("your grade is A\n");
+        scanf("%d\n",&a[i]);
     }
-    else if(percent>=80 && percent<90)
+    printf("the elements of the array are:");
+    for(i=0;i<n;i++)
     {
-        printf("your grade is B\n");
+        printf("%d ",a[i]);
     }
-    else if(percent>=70 && percent<80)
+    for(i=0;i<n;i++)
     {
-        printf("your grade is C\n");
+       for(j=i+1;j<n;j++)
+       {
+           if(a[i]>a[j])
+           {
+               temp=a[i];
+               a[i]=a[j];
+               a[j]=temp;
+           }
+       }
     }
-    else if(percent>=60 && percent<70)
-    {
-        printf("your grade is D\n");
-    }
-    else if(percent>=40 && percent<60)
-    {
-        printf("your grade is E\n");
-    }
-    else
-    {
-        printf("beta tumse na ho paega\n");
-    }
-return 0;
+    printf("\n the smallest number of the array is %d\n",a[0]);
+    printf("the greatest number of the array is %d\n",a[n-1]);
 }
+
